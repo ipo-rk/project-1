@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6c724b2a92.js" crossorigin="anonymous"></script>
+    <link href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="logo.png" alt="" />
+        </div>
+        <ul>
+          <li><a href="#home" class="navlinks">HOME</a></li>
+          <li><a href="#about" class="navlinks">ABOUT</a></li>
+          <li><a href="#project" class="navlinks">PROJECT</a></li>
+          <li><a href="#contact" class="navlinks">CONTACT</a></li>
+        </ul>
+        <div class="menu">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="slider">
+        <div class="banner">
+          <img src="bg1.jpg" alt="" />
+          <div class="content">
+            <h1><i class="fa-solid fa-code"></i> Ipo RK <i class="fa-solid fa-pen-fancy"></i></h1>
+            <p>
+              Hallo Guys <br />
+              Selamat datang di website Programmer & Designer saya. <br />
+              Ini adalah tampilan Landing Page website sederhana saya
+            </p>
+            <button type="button">CONTACT ME</button>
+          </div>
+        </div>
+        <div class="banner">
+          <img src="pr1.jpg" alt="" />
+          <div class="content">
+            <h1>About me</h1>
+            <p>
+              Perkenalkan saya Ricky edowai Asal Kampus saya Universitas Sains dan Teknologi jayapura (USTJ),<br />
+              Fakultas Ilmu Komputer dan Manajemen (FIKOM), Jurusan Sistem Informasi (S1)
+            </p>
+            <button type="button"><a href="#" class="nalinks">CONTACT ME</a></button>
+          </div>
+        </div>
+        <div class="banner">
+          <img src="13a.jpg" alt="" />
+          <div class="content">
+            <h1>My Project</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, consequatur laborum? Dolor vero, atque dolorum laborum, dignissimos, excepturi similique consectetur inventore esse
+              velit dolorem sapiente!
+            </p>
+            <button type="button">CONTACT ME</button>
+          </div>
+        </div>
+        <div class="banner">
+          <img src="4b.jpg" alt="" />
+          <div class="content">
+            <h1>Contact Me</h1>
+            <div class="hero">
+              <ul>
+                <li>
+                  <a href="https://web.facebook.com/ricky.lhyko11.03"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/ipo__rizal/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="https://wa.me/6281215376865"><i class="fa-brands fa-whatsapp"></i></a>
+                </li>
+              </ul>
+            </div>
+            <p>Silahkan teman teman klick ikon diatas ini, untuk menghubungi saya 😊🙏</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var slider = document.getElementById("slider");
+      var navlinks = document.getElementsByClassName("navlinks");
+      var banners = document.getElementsByClassName("banner");
+
+      navlinks[0].onclick = function () {
+        slider.style.transform = "translateX(0%)";
+        zoomeffect();
+      };
+      navlinks[1].onclick = function () {
+        slider.style.transform = "translateX(-25%)";
+        zoomeffect();
+      };
+      navlinks[2].onclick = function () {
+        slider.style.transform = "translateX(-50%)";
+        zoomeffect();
+      };
+      navlinks[3].onclick = function () {
+        slider.style.transform = "translateX(-75%)";
+        zoomeffect();
+      };
+
+      function zoomeffect() {
+        // let i;
+        // for (i = 0; i <= banners.length; i++) {
+        //   banners[i].style.animation = "slides 4s linear";
+        // }
+        for (banner of banners) {
+          banner.style.animation = "slides 4s linear";
+        }
+        setTimeout(() => {
+          for (banner of banners) {
+            banner.style.animation = "none";
+          }
+        }, 4000);
+      }
+    </script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
